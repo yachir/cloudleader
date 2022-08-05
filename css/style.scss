@@ -1,0 +1,441 @@
+$main: #04447C;
+$yellow: #FFB85B;
+$light-blue: #D6E6F4;
+$light:  #dee2e6;
+$secondary: #6c757d;
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&family=Noto+Sans+TC&display=swap&family=Unna:wght@700&display=swap');
+*{
+    font-family: 'Maven Pro', 'Noto Sans TC', sans-serif;
+    position: relative;
+    font-size: 18px;
+    color: #1a1a1a;
+    }
+    a{
+        text-decoration: none;
+    }
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;    
+    overflow-wrap: break-word;
+    overflow-y: auto;
+}
+.outer {
+    width: 100%;
+    padding-top: 120px;
+    overflow: hidden;
+}
+.btn-primary{
+    background: $main;
+}
+.btn-warning{
+    background: $yellow;
+
+}
+.color-main{
+    color: $main !important;
+}
+
+section{
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    position: relative;
+}
+.max-block{
+    max-width: 1000px;
+    margin: auto;
+}
+.title{
+    position: relative;
+    text-align: center;
+    margin-bottom: 1em;
+    .en{
+        color: $secondary;
+        padding-bottom: 5px; 
+        letter-spacing: 5px;
+
+    }
+    // .en{
+    //     position: absolute;
+    //     font-size: calc(100vw / 4 + 8px);
+    //     font-family: 'Unna', serif;
+    //     color: transparent;
+    //     -moz-text-stroke-width: 1px;
+    //     -webkit-text-stroke-width: 1px;
+    //     -moz-text-stroke-color: $yellow;
+    //     -webkit-text-stroke-color: $yellow;
+    //     left: 50%;
+    //     transform: translate(-50%,-60%);
+    //     letter-spacing: 16px;
+    //     white-space:nowrap;
+
+    // }
+    h2{
+        position: relative;
+        font-size: 36px;
+        color: $main;
+        letter-spacing: 4px;
+        margin-bottom: 1.5em;
+        &::after{
+            content: "";
+            height: 30px;
+            background-image: url(../images/wave.png);
+            display: block;
+            width: 241px;
+            margin: auto;
+            transform: scale(.7);
+            margin-top: .3em;
+        }
+    }
+}
+
+
+//navbar 上方導覽列
+.nav-link{
+    padding: 2rem;
+    font-size: 1.1em;
+    letter-spacing: 5px;
+    &:hover{
+        background-image: url(../images/deco_cloud3.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    span{
+        display: block;
+        letter-spacing: 0px;
+        margin-top: -5px;
+    }
+} 
+#Logo{
+    height: 85px;
+    transition: .1s;
+}
+//#cover 預設手機版尺寸
+#Cover{
+    padding: 110px 30px;
+    z-index: 10;
+    h1{
+        letter-spacing: 3px;
+        span{
+            font-size: 2em;
+            color: $yellow;
+        }      
+    }
+}
+.top_img {
+    width: 100%;
+    padding: 25px 0;
+}
+.top_block {
+    h3{
+        text-align: center;
+        
+    }
+}
+.top_title{
+    position: relative;
+    transform: rotate(-7deg);
+    text-align: center;
+    margin-top: -100px;
+}
+.highlight{
+  position: relative;
+}
+.highlight:before{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  height: 0.7em;
+  top: 0.6em;
+  background: $yellow;
+  width: 9em;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=7)";
+  filter: alpha(opacity=7);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+//top_web最上方cover 下方是電腦版尺寸
+@media (min-width: 768px) { //window width >768
+    #Cover{
+        h1{
+            letter-spacing: 8px;  
+        }
+    }   
+    .top_title{
+        transform: rotate(-7deg);
+        text-align: center;
+    }
+    
+// .title{
+//     .en{
+//         font-size: 160px;
+//     }   
+// }
+
+
+ }
+
+@media screen and (min-width: 992px){//window width>992
+    #Cover{
+        height: 100vh;
+        padding: 0;
+    }
+    .top_block {
+        position: relative;
+        height: 100vh;
+        width: 80vw;
+        left: 10vw;
+        h3{
+            bottom: 20%;
+            left: 5%;
+            position: absolute;
+            transform: rotate(-7deg);
+        }
+    }
+    .top_title{
+        text-align: left;        
+        transform: translateY(-50%) rotate(-7deg);
+        top: 35%;
+        padding-left: 1em;
+    }
+    
+    
+    .top_img {
+        left: 40%;
+        top: 50%;
+        position: absolute;
+        width: 50vw;
+        transform: translateY(-50%);
+        z-index: -1;
+        
+    }
+    .nav-link{
+        padding: 0;
+    } 
+}
+
+//navber+cover END
+
+//WORKS案例分享
+#Works{
+    figure{
+        height:100px;
+    }
+    .workimg{
+        display: block;
+        height: auto;
+        max-width: 180px;
+        max-height: 100px;
+        position: absolute;
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+}
+.card{
+    border-radius: 1.5rem;
+    max-width: 320px;
+    margin: auto;
+}
+.card-img, .card-img-top {
+    border-top-left-radius: calc(.8rem - 1px);
+    border-top-right-radius: calc(.8rem - 1px);
+}
+.genre{
+    color: #fff;
+    background: $secondary;
+    padding: 3px 8px;
+    margin-right: 3px;
+}
+//logos合作店家
+.logos li{
+    width: calc(198px + 2rem);
+    padding: 1rem 2.5rem;
+    text-align: center;
+    
+}
+.logos li img {
+    max-height: 80px;
+    max-width: calc(198px - 2rem);
+}
+
+//WORKS案例分享END
+//About 關於我們
+#About{
+    position: relative;
+    background: #FBF7F1;
+    .headimg{
+        // height: 100px;
+        width: 50%;
+        margin: 20px auto;
+        background: #ccc;
+    }
+    .name{
+        font-size: 1.2em;
+    }
+}
+
+.bg_grass {
+    position: absolute;
+    bottom: 0;
+    left: -50px;
+    width: 16vw;
+    transform:scaleX(-1);
+}
+.bg_grass2 {
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    width: 16vw;
+} 
+@media (max-width: 767.98px) { //<767 mobile
+    .bg_grass,.bg_grass2 {
+        display: none;
+    }
+}
+//About 關於我們END
+//Service 服務內容
+#Service{
+    background: #D9D9D9;
+    h2{
+        position: relative;
+        font-size: 36px;
+        color: $main;
+        letter-spacing: 4px;
+        margin-bottom: 1em;
+    }
+}
+.bg_point5{
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+}
+.bg_point6{
+    position: absolute;
+    top: 0;
+    right: -50px;
+
+}
+@media (max-width: 1199.98px) { //<1199
+    .bg_point6 {
+        right: 100%;
+
+    }
+ } 
+//Service 服務內容END
+//Contact聯絡我們
+#Contact{
+    background: $main;
+    h2{
+        color: $yellow;
+        font-size: 36px;
+        letter-spacing: 4px;
+        margin-bottom: 1em;
+    }
+}
+.title_contact{
+    color: $main;
+    font-size: 130px;
+    font-family: 'Unna', serif;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: -1.5rem;
+    letter-spacing: 0.1em;
+}
+
+ .bg_plante {
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    width: 150px;
+}
+.bg_money {
+    position: absolute;
+    bottom: 0px;
+    right: 10%;
+    height: 60px;
+}
+.icons a:hover{
+    opacity: 0.5;
+}
+//Contact聯絡我們END
+//bg 背景裝飾
+.cover-bg{
+    position: initial;
+}
+.bg_{
+    z-index: -10;
+    position: absolute;
+}
+.bg_item {
+    top: 50vh;
+    left: -15%;
+}
+.bg_point {
+    top: 80vh;
+    left: 90%;
+}
+.bg_point2 {
+    top: 50px;
+    left: -10%;
+}
+.bg_point3 {
+    top: 150%;
+    left: -8%;
+}
+.bg_point4 {
+    top: 200vh;
+    left: 80%;
+    transform: rotate(90deg);
+
+}
+////bg 背景裝飾<767
+@media (max-width: 767.98px) { //<767 mobile
+    #About{
+        .headimg{
+            height: 80px;
+            width: 80px;
+        }
+    }
+    
+    .title_contact {
+        font-size: calc(100vw/5);
+        top: calc(100vw/18*-1);
+    }
+    .bg_plante {
+        bottom: 0px;
+        left: -100%;
+    }
+    .bg_money {
+        position: absolute;
+        left: 50%;
+        height: 60px;
+        transform: translateX(-50%);
+    }
+    .bg_item {
+        top: 92vh;
+        left: -40%;
+        width: 120vw;
+    }
+    .bg_point2 {
+        left: -50%;
+    }
+    .bg_point3{
+        left: -100%;
+    }
+    .bg_point4{
+        top: 250vh;
+    }
+ }
+ //bg 背景裝飾END
